@@ -1,0 +1,16 @@
+database outlook
+
+   |composer|     |    |song|
+------------------|---------------------
+composer_id       | song_id
+song (has_many)   | composer_id
+                  | composer(has_one)
+                  | video info
+                  | collection
+                  | type
+                  | instrumentation
+                  | key
+                  | rcm_grade
+                  | henle_grade
+                  | abrsm_grade
+                  
