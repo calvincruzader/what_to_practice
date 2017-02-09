@@ -1,7 +1,6 @@
 class ComposerController < ApplicationController
 
   def show
-    composers = Composer.select_all
-
+    @composers = Composer.first
   end
 end
