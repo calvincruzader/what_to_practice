@@ -10,16 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208193641) do
+ActiveRecord::Schema.define(version: 20170209215957) do
 
   create_table "composers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "songs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "composer_id"
+    t.string   "video_info"
+    t.string   "collection"
+    t.string   "type"
+    t.string   "instrumentation"
+    t.string   "key"
+    t.string   "rcm_grade"
+    t.string   "henle_grade"
+    t.string   "abrsm_grade"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "title"
+    t.index ["composer_id"], name: "index_songs_on_composer_id"
   end
 
 end

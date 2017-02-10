@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :songs
+  resources :composers
   get 'song/view'
 
   get 'song/show'

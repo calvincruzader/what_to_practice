@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Composer:</strong>
+  <%= @song.composer %>
+</p>
+
+<p>
+  <strong>Video info:</strong>
+  <%= @song.video_info %>
+</p>
+
+<p>
+  <strong>Collection:</strong>
+  <%= @song.collection %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @song.type %>
+</p>
+
+<p>
+  <strong>Instrumentation:</strong>
+  <%= @song.instrumentation %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @song.key %>
+</p>
+
+<p>
+  <strong>Rcm grade:</strong>
+  <%= @song.rcm_grade %>
+</p>
+
+<p>
+  <strong>Henle grade:</strong>
+  <%= @song.henle_grade %>
+</p>
+
+<p>
+  <strong>Abrsm grade:</strong>
+  <%= @song.abrsm_grade %>
+</p>
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>

@@ -1,0 +1,62 @@
+<%= form_for(song) do |f| %>
+  <% if song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(song.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+      <ul>
+      <% song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :composer_id %>
+    <%= f.text_field :composer_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video_info %>
+    <%= f.text_field :video_info %>
+  </div>
+
+  <div class="field">
+    <%= f.label :collection %>
+    <%= f.text_field :collection %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instrumentation %>
+    <%= f.text_field :instrumentation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :key %>
+    <%= f.text_field :key %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rcm_grade %>
+    <%= f.text_field :rcm_grade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :henle_grade %>
+    <%= f.text_field :henle_grade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :abrsm_grade %>
+    <%= f.text_field :abrsm_grade %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
