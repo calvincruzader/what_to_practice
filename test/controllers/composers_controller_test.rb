@@ -5,41 +5,41 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
     @composer = composers(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get composers_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_composer_url
-    assert_response :success
-  end
+  # test 'should get new' do
+  #   get new_composer_url
+  #   assert_response :success
+  # end
+  #
+  # test 'should create composer' do
+  #   assert_difference('Composer.count') do
+  #     post composers_url, params: {composer: {name: @composer.name, songs: @composer.songs} }
+  #   end
+  #
+  #   assert_redirected_to composer_url(Composer.last)
+  # end
+  #
+  # test 'should show composer' do
+  #   get composer_url(@composer)
+  #   assert_response :success
+  # end
+  #
+  # test 'should get edit' do
+  #   get edit_composer_url(@composer)
+  #   assert_response :success
+  # end
+  #
+  # test 'should update composer' do
+  #   @songs = [Song.new(title: 'Confutatis Maledictis'), Song.new(title: 'Reqiuem')]
+  #   patch composer_url(@composer), params: { composer: {:name => 'Wolfgang Amadeus Mozart', :songs => @songs} }
+  #   assert_redirected_to composer_url(@composer)
+  # end
 
-  test "should create composer" do
-    assert_difference('Composer.count') do
-      post composers_url, params: {composer: {name: @composer.name, songs: @composer.songs} }
-    end
-
-    assert_redirected_to composer_url(Composer.last)
-  end
-
-  test "should show composer" do
-    get composer_url(@composer)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_composer_url(@composer)
-    assert_response :success
-  end
-
-  test "should update composer" do
-    @songs = [Song.new(title: 'Confutatis Maledictis'), Song.new(title: "Reqiuem")]
-    patch composer_url(@composer), params: { composer: { :name => "Wolfgang Amadeus Mozart", :songs => @songs} }
-    assert_redirected_to composer_url(@composer)
-  end
-
-  test "should destroy composer" do
+  test 'should destroy composer' do
     assert_difference('Composer.count', -1) do
       delete composer_url(@composer)
     end

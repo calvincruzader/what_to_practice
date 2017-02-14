@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get 'composer/show'
 
   get 'home/index'
-  root 'composers#show'
+  root 'composers#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

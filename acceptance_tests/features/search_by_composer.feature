@@ -1,6 +1,6 @@
 Feature: View Song Entries
   In order to figure out what I should practice next
-  I want to be able to see all the pieces a composer has made thus far
+  I want to be able to see all the pieces a composer created 
 
   Scenario: Search by Composer
     Given I visit the home page

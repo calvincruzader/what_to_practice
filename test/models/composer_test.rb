@@ -45,7 +45,4 @@ class ComposerTest < ActiveSupport::TestCase
     assert @composer.valid?, 'Composer should be valid with any number of songs'
     assert_equal songs, @composer.songs.to_ary, 'Composer should have all the songs instantiated with them'
   end
-
-  #maybe more tests on:
-
 end
