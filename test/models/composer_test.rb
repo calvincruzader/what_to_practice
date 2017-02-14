@@ -31,7 +31,7 @@ class ComposerTest < ActiveSupport::TestCase
     assert @composer.valid?, 'Composer should be valid with one song input'
 
     @composer.songs << @song2
-    assert_equal [@song1, @song2], @composer.songs.to_ary, 'Composer should have both songs now'
+    assert_equal [@song1, @song2], @composer.songs.to_ary, 'Composer should be valid with two songs'
     assert @composer.valid?, 'Composer should be valid with more than one song input'
   end
 
@@ -47,5 +47,5 @@ class ComposerTest < ActiveSupport::TestCase
   end
 
   #maybe more tests on:
-  #composers should only respond to songs they created
+
 end

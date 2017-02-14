@@ -4,7 +4,7 @@ database outlook
 ------------------|---------------------
 composer_id       | song_id
 song (has_many)   | composer_id
-                  | composer(has_one)
+name              | composer(has_one)
                   | video info
                   | collection
                   | type

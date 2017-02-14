@@ -25,7 +25,6 @@ class ComposersController < ApplicationController
   # POST /composers.json
   def create
     @composer = Composer.new(composer_params)
-
     respond_to do |format|
       if @composer.save
         format.html { redirect_to @composer, notice: 'Composer was successfully created.' }
@@ -64,11 +63,11 @@ class ComposersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_composer
-      @composer = Composer.find(params[:id])
+      # @composer = Composer.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def composer_params
-      params.fetch(:composer, {})
+      params.require(:composer).permit(:name)
     end
 end

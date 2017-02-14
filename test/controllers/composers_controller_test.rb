@@ -17,7 +17,7 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create composer" do
     assert_difference('Composer.count') do
-      post composers_url, params: { composer: {  } }
+      post composers_url, params: {composer: {name: @composer.name, songs: @composer.songs} }
     end
 
     assert_redirected_to composer_url(Composer.last)
@@ -34,7 +34,8 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update composer" do
-    patch composer_url(@composer), params: { composer: {  } }
+    @songs = [Song.new(title: 'Confutatis Maledictis'), Song.new(title: "Reqiuem")]
+    patch composer_url(@composer), params: { composer: { :name => "Wolfgang Amadeus Mozart", :songs => @songs} }
     assert_redirected_to composer_url(@composer)
   end
 

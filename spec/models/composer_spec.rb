@@ -1,6 +1,5 @@
-describe Composer do
+require 'rails_helper'
 
-  it {should have_many(:songs) }
-
-
+RSpec.describe Composer, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

@@ -11,6 +11,9 @@
 # # csv_text = File.read(Rails.root.join('db', 'seeds', 'classical_music_db_file.csv'))
 # # puts csv_text
 #
+# @songs = [Song.create(title: "9th Symphony"), Song.create(title: "Another Wow Song")]
+# Composer.create(name: "Ludwig van Beethoven", songs: @songs)
+
 # counter = 0
 # CSV.foreach("C:/devl/workspaces/ruby_practice/what_to_practice/what_to_practice/db/classical_music_db_file.csv") do |row|
 #   composer_name = row[0]
