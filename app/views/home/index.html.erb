@@ -1,7 +1,23 @@
 <h1>Search:</h1>
 
-<%= form_tag('/search', method: 'get') do %>
+<%= form_tag url_for(controller: 'composers', action: 'search'), method: 'get' do %>
     <%= label_tag(:q, 'Search for:') %>
     <%= text_field_tag(:q) %>
     <%= submit_tag('Search') %>
 <% end %>
+
+
+<% if @composer %>
+
+    <div><%=@composer.name%></div>
+    <div><%=@composer.songs.length%></div>
+    <div>
+
+      <% @composer.songs.each do |song| %>
+          <div><%=song.title%></div>
+      <%end%>
+    </div>
+<%end%>
+
+
+<!-- numbers search, invalid characters search, normal search, no search, lots of characters search  -->

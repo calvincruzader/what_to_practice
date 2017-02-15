@@ -14,3 +14,11 @@ name              | composer(has_one)
                   | henle_grade
                   | abrsm_grade
                   
+#todo
+search bar
+    -html
+        -update with bootstrap
+    -wire up the backend to respond to it
+        -getting an ugly url, fix later
+    -responsiveness
+    -

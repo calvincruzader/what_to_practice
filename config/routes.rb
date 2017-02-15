@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :composers
   resources :songs
-  resources :composers
+  resources :composers do
+    collection do
+      get 'search'
+    end
+  end
+
+  # get 'composers/search'
+
   get 'song/view'
 
   get 'song/show'
@@ -13,6 +19,6 @@ Rails.application.routes.draw do
   get 'composer/show'
 
   get 'home/index'
-  root 'composers#index'
+  root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -8,6 +8,12 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
   test 'should get index' do
     get composers_url
     assert_response :success
+    assert_equal(@request.path, '/composers')
+  end
+  
+  test 'should get search url' do
+    get '/composers/search'
+    assert_equal(@request.path, '/composers/search')
   end
 
   # test 'should get new' do
@@ -39,11 +45,11 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
   #   assert_redirected_to composer_url(@composer)
   # end
 
-  test 'should destroy composer' do
-    assert_difference('Composer.count', -1) do
-      delete composer_url(@composer)
-    end
-
-    assert_redirected_to composers_url
-  end
+  # test 'should destroy composer' do
+  #   assert_difference('Composer.count', -1) do
+  #     delete composer_url(@composer)
+  #   end
+  #
+  #   assert_redirected_to composers_url
+  # end
 end

@@ -17,9 +17,8 @@ require 'sqlite3'
 counter = 0
 CSV.foreach('C:/devl/workspaces/ruby_practice/what_to_practice/what_to_practice/db/classical_music_db_file.csv') do |row|
   composer_name = row[0]
-
   song_name = row[2]
-
+  song_name[0..1] = ''
   key = row[7]
   collection = row[8]
   rcm_grade = row[9]

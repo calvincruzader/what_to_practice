@@ -13,6 +13,11 @@ class ComposersController < ApplicationController
   #   @composer = Composer.find_by_name('Mozart, Wolfgang Amadeus')
   # end
 
+  def search
+    @composer = Composer.find_by_name(params[:q])
+    render 'home/index'
+  end
+
   # GET /composers/new
   def new
     # @composer = Composer.new
