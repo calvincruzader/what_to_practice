@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ComposersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @composer = composers(:one)
+    @composer = @mozart
   end
 
   test 'should get index' do
@@ -10,17 +10,18 @@ class ComposersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_equal(@request.path, '/composers')
   end
-  
+
   test 'should get search url' do
     get '/composers/search'
-    assert_equal(@request.path, '/composers/search')
+    assert_response :success
+    assert_generates '/composers/search', controller: 'composers', action: 'search'
   end
 
-  # test 'should get new' do
-  #   get new_composer_url
-  #   assert_response :success
-  # end
-  #
+  test '#search should retrieve the appropriate items from the database given a search query' do
+    get('/composers/search', params: {q: 'Brahms, Johannes'})
+    # assert_equal(@response.body, 'what is inside')
+  end
+
   # test 'should create composer' do
   #   assert_difference('Composer.count') do
   #     post composers_url, params: {composer: {name: @composer.name, songs: @composer.songs} }

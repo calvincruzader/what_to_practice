@@ -11,7 +11,4 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_recognizes({controller: 'home', action: 'index'}, '/')
   end
 
-  test '' do
-
-  end
 end

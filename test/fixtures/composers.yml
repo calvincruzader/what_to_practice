@@ -4,8 +4,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+mozart:
+  name: Wolfgang Amadeus Mozart
+  created_at: DateTime.now
+  updated_at: DateTime.now
+
+liszt:
+  name: Franz Liszt
+  created_at: DateTime.now
+  updated_at: DateTime.now

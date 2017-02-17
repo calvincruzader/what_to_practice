@@ -5,6 +5,7 @@ class ComposersController < ApplicationController
   # GET /composers.json
   def index
     @composers = Composer.all
+    redirect_to 'index'
   end
 
   # GET /composers/1
@@ -18,44 +19,34 @@ class ComposersController < ApplicationController
     render 'home/index'
   end
 
-  # GET /composers/new
-  def new
-    # @composer = Composer.new
-  end
-
-  # GET /composers/1/edit
-  # def edit
-  #   # @composer = Composer.new
-  # end
-
   # POST /composers
   # POST /composers.json
-  # def create
-  #   @composer = Composer.new(composer_params)
-  #   respond_to do |format|
-  #     if @composer.save
-  #       format.html { redirect_to @composer, notice: 'Composer was successfully created.' }
-  #       format.json { render :show, status: :created, location: @composer }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @composer.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def create
+    @composer = Composer.new(composer_params)
+    respond_to do |format|
+      if @composer.save
+        format.html { redirect_to @composer, notice: 'Composer was successfully created.' }
+        format.json { render :show, status: :created, location: @composer }
+      else
+        format.html { render :new }
+        format.json { render json: @composer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /composers/1
   # PATCH/PUT /composers/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @composer.update(composer_params)
-  #       format.html { redirect_to @composer, notice: 'Composer was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @composer }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @composer.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @composer.update(composer_params)
+        format.html { redirect_to @composer, notice: 'Composer was successfully updated.' }
+        format.json { render :show, status: :ok, location: @composer }
+      else
+        format.html { render :edit }
+        format.json { render json: @composer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /composers/1
   # DELETE /composers/1.json

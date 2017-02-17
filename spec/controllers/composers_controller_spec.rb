@@ -24,11 +24,11 @@ RSpec.describe ComposersController, type: :controller do
   # Composer. As you add validations to Composer, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    skip('Add a hash of attributes valid for your model')
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    skip('Add a hash of attributes invalid for your model')
   }
 
   # This should return the minimal set of values that should be in the session
@@ -36,8 +36,8 @@ RSpec.describe ComposersController, type: :controller do
   # ComposersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
-    it "assigns all composers as @composers" do
+  describe 'GET #index' do
+    it 'assigns all composers as @composers' do
       composer = Composer.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(assigns(:composers)).to eq([composer])

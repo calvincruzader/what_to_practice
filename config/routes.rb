@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # get 'composers/search'
-
   get 'song/view'
 
   get 'song/show'
@@ -17,6 +15,8 @@ Rails.application.routes.draw do
   get 'songs/show'
 
   get 'composer/show'
+
+  get 'composers/index'
 
   get 'home/index'
   root 'home#index'

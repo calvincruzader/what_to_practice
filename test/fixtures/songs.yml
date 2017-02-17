@@ -1,23 +1,57 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  composer: one
-  video_info: MyString
-  collection: MyString
-  type: 
-  instrumentation: MyString
-  key: MyString
-  rcm_grade: MyString
-  henle_grade: MyString
-  abrsm_grade: MyString
+alla_turca:
+  title: Alla Turca
+  composer: mozart
+  video_info: empty
+  collection: empty
+  type: empty
+  instrumentation: empty
+  key: empty
+  rcm_grade: empty
+  henle_grade: empty
+  abrsm_grade: empty
+  created_at: DateTime.now
+  updated_at: DateTime.now
 
-two:
-  composer: two
-  video_info: MyString
-  collection: MyString
-  type: 
-  instrumentation: MyString
-  key: MyString
-  rcm_grade: MyString
-  henle_grade: MyString
-  abrsm_grade: MyString
+campanella:
+  title: La Campanella
+  composer: mozart
+  video_info: empty
+  collection: empty
+  type: empty
+  instrumentation: empty
+  key: empty
+  rcm_grade: empty
+  henle_grade: empty
+  abrsm_grade: empty
+  created_at: DateTime.now
+  updated_at: DateTime.now
+
+liebestraum:
+  title: Liebestraum
+  composer: liszt
+  video_info: empty
+  collection: empty
+  type: empty
+  instrumentation: empty
+  key: empty
+  rcm_grade: empty
+  henle_grade: empty
+  abrsm_grade: empty
+  created_at: DateTime.now
+  updated_at: DateTime.now
+
+liebesleid:
+  title: Liebesleid
+  composer: liszt
+  video_info: empty
+  collection: empty
+  type: empty
+  instrumentation: empty
+  key: empty
+  rcm_grade: empty
+  henle_grade: empty
+  abrsm_grade: empty
+  created_at: DateTime.now
+  updated_at: DateTime.now
